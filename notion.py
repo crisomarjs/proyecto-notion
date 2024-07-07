@@ -1,3 +1,10 @@
+curl --location --request POST 'https://api.notion.com/v1/databases/<database_id>/query' \
+--header 'Authorization: Bearer <secret_bot>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "start_cursor": "33e19cb9-751f-4993-b74d-234d67d0d534"
+}'
+
 @app.route('/v1/prices', methods=['GET'])
 def get_prices():
 product = request.args.get('product')
